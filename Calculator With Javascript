@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title>HTML Calculator</title> 
+    <style> 
+    body {
+    background: linear-gradient(135deg, #bb0ff4, #fa08da);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+        table { 
+            border: 2px solid black; 
+            margin-left: auto; 
+            margin-right: auto; 
+        } 
+          
+        input[type="button"] { 
+            width: 100%; 
+            padding: 20px 70px; 
+            background-color: rgb(245, 125, 73); 
+            color: white; 
+            font-size: 24px; 
+            font-weight: bold; 
+            border: none; 
+            border-radius: 5px; 
+        } 
+          
+        input[type="text"] { 
+            padding: 30px 70px; 
+            font-size: 24px; 
+            font-weight: bold; 
+            border: none; 
+            border-radius: 5px; 
+            border: 2px solid black; 
+        } 
+    </style> 
+</head> 
+  
+<body> 
+    <table id="calcu"> 
+        <tr> 
+            <td colspan="3"> 
+              <input type="text" id="val" readonly>
+            </td> 
+            <td><input type="button" value="c" onclick="val.value = ''"></td> 
+        </tr> 
+  
+        <tr> 
+            <td><input type="button" value="1" onclick="val.value += 1"></td> 
+            <td><input type="button" value="2"  onclick="val.value += 2"></td> 
+            <td><input type="button" value="3"  onclick="val.value += 3"></td> 
+            <td><input type="button" value="/" onclick="val.value +='/' "></td> 
+        </tr> 
+        <tr> 
+            <td><input type="button" value="4"  onclick="val.value += 4"></td> 
+            <td><input type="button" value="5"  onclick="val.value += 5"></td> 
+            <td><input type="button" value="6"  onclick="val.value += 6"></td> 
+            <td><input type="button" value="*" onclick="val.value +='*' "></td> 
+        </tr> 
+        <tr> 
+            <td><input type="button" value="7"  onclick="val.value += 7"></td> 
+            <td><input type="button" value="8"  onclick="val.value += 8"></td> 
+            <td><input type="button" value="9"  onclick="val.value += 9"></td> 
+            <td><input type="button" value="-" onclick="val.value +='-' "></td> 
+        </tr> 
+        <tr> 
+            <td><input type="button" value="0"  onclick="val.value += 0"></td> 
+            <td><input type="button" value="."  onclick="val.value +='.' "></td> 
+            <td><input type="button" value="="  onclick="val.value = eval(val.value)"></td> 
+            <td><input type="button" value="+" onclick="val.value +='+' "></td> 
+        </tr> 
+    </table> 
+</body> 
+</html>
